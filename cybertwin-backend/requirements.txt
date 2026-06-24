@@ -1,0 +1,10 @@
+Flask==3.0.3
+flask-cors==4.0.1
+Flask-SQLAlchemy==3.1.1
+PyMySQL==1.1.1
+cryptography==42.0.8
+flasgger==0.9.7.1
+flask-expects-json==1.7.0
+python-dotenv==1.0.1
+flask-jwt-extended==4.6.0
+bcrypt==4.1.3
