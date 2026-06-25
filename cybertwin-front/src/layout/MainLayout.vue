@@ -3,6 +3,7 @@ import { onMounted } from 'vue'
 import AppSidebar from './AppSidebar.vue'
 import AppTopbar from './AppTopbar.vue'
 import ChatbotWidget from '@/components/shared/ChatbotWidget.vue'
+import AppFilAriane from '@/components/shared/AppFilAriane.vue'
 import { useEntrepriseStore } from '@/stores/entreprise.store'
 import { useUiStore } from '@/stores/ui.store'
 
@@ -18,6 +19,7 @@ onMounted(() => entrepriseStore.charger())
     <div class="app-main" :class="{ reduite: ui.sidebarReduite }">
       <AppTopbar />
       <main class="app-content">
+        <AppFilAriane /> 
         <router-view v-slot="{ Component }">
           <transition name="page" mode="out-in">
             <component :is="Component" />
