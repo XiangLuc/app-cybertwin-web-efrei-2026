@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+
+# Environnement virtuel
+.venv/
+venv/
+env/
+
+# Variables d'environnement (contient le mot de passe BDD !)
+.env
+
+# Bases de données locales
+*.db
+*.sqlite3
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
