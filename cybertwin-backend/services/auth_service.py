@@ -27,19 +27,15 @@ class AuthService:
         self._verifier_mot_de_passe(dto.get("mot_de_passe", ""))
         self._verifier_email_libre(email)
 
-        # Amorcage : le tout premier compte cree est ADMIN.
-        if self.repository.count() == 0:
-            role = Role.ADMIN
-        else:
-            demande = dto.get("role", Role.LECTEUR.value)
-            if demande == Role.ADMIN.value:
-                raise ValidationError(
-                    "Le role ADMIN ne peut pas etre choisi a l'inscription."
-                )
-            role = Role(demande)
+        demande = dto.get("role", Role.LECTEUR.value)
+        if demande == Role.ADMIN.value:
+            raise ValidationError(
+                "Le role ADMIN ne peut pas etre choisi a l'inscription."
+            )
+        role = Role(demande)
 
         return self._creer(email, dto["mot_de_passe"], role,
-                           dto.get("nom"), dto.get("prenom"))
+                        dto.get("nom"), dto.get("prenom"))
 
 
     def creer_par_admin(self, dto: dict):

@@ -34,10 +34,6 @@ async function inscription() {
       <h1 class="auth-title" style="margin-top:0.5rem">Inscription</h1>
       <p class="auth-sub">Creez votre compte CyberTwin</p>
     </div>
-    <Message severity="info" :closable="false" style="margin-bottom:1rem">
-      {{ SOCIETE.produit }} par {{ SOCIETE.nom }} aide les PME a evaluer leur risque cyber.
-      Le tout premier compte cree devient automatiquement administrateur.
-    </Message>
     <div class="row">
       <div class="field" style="flex:1"><label>Prenom</label><InputText v-model="form.prenom" class="full" /></div>
       <div class="field" style="flex:1"><label>Nom</label><InputText v-model="form.nom" class="full" /></div>
